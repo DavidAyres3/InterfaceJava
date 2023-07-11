@@ -5,12 +5,12 @@ public class PaypalService implements OnlinePaymentService{
 
     @Override
     public Double paymentFee(Double amount) {
-        return amount + amount * 0.01;
+        return amount * 0.02;
     }
 
     @Override
     public Double interest(Double amount, Integer months) {
-        return amount * Math.pow(1.02, months);
+        return amount * 0.01 * months;
     }
     
 }
